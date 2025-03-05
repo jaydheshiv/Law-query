@@ -61,6 +61,7 @@ law-query/
 ```
 
  📍 Key Functionalities & Implementation
+ 
  1️⃣ **Legal Query Classification**
 - Uses **TF-IDF + Logistic Regression** for classification.
 - Categorizes queries into **Civil Law, Family Law, or the Motor Vehicles Act**.
