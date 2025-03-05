@@ -86,3 +86,4 @@ law-query/
 - Detects negations to enhance query understanding.
 
  📸 Screenshot
+ ![Image](https://github.com/user-attachments/assets/6fca59f0-8002-4e4b-8154-2c2a3cafd341)
