@@ -1,55 +1,79 @@
-Generalized Law Query Retrieval and Classification System
-This is a Natural Language Processing (NLP) based legal query system that classifies user queries into different law categories and retrieves the most relevant legal sections based on the input. The system also provides syntactic, semantic, and sentiment analysis of user queries.
+⚖️ Generalized Law Query Retrieval and Classification System
 
-Features
-Law Classification: Uses TF-IDF + Logistic Regression to classify queries into Civil Law, Family Law, or Motor Vehicles Act.
-Legal Information Retrieval: Implements BM25 ranking algorithm to find the most relevant legal sections.
-Syntax & Semantics Analysis:
-Named Entity Recognition (NER)
-Part-of-Speech (POS) tagging
-Dependency Parsing
-Noun Phrase Chunking
-Sentiment Analysis: Uses TextBlob to determine the sentiment (positive, negative, or neutral) of the query.
-Negation Detection: Identifies if negation words like not, never, no are present in the query.
-Streamlit UI: Interactive user interface for entering queries and analyzing legal information.
-Installation
-1. Clone the Repository
+ 📌 Project Overview
+The **Generalized Law Query Retrieval and Classification System** is an **AI-powered legal document retrieval system** that helps users classify legal queries and retrieve relevant law sections based on their input. The system utilizes **TF-IDF + Logistic Regression** for law classification and **BM25** for legal document retrieval, alongside **syntax & semantics analysis, named entity recognition (NER), sentiment analysis, and negation detection**.
+
+ 🎯 Features
+- **Legal Query Classification** – Identifies whether a legal query falls under **Civil Law, Family Law, or the Motor Vehicles Act**.
+- **AI-powered Legal Information Retrieval** – Uses **BM25 ranking** to fetch the most relevant legal sections.
+- **Text Preprocessing & NLP** – Performs **tokenization, stopword removal, lemmatization**.
+- **Named Entity Recognition (NER)** – Identifies legal terms and key entities within queries.
+- **Syntax & Semantics Analysis** – Provides **POS tagging, dependency parsing, noun phrase chunking**, and **rule-based entity matching**.
+- **Sentiment Analysis** – Determines sentiment polarity using **TextBlob**.
+- **Negation Detection** – Identifies negations within legal queries.
+- **User-Friendly UI** – Built using **Streamlit** for an intuitive and interactive user experience.
+
+ 🚀 Installation & Setup
+ Prerequisites
+Ensure you have the following installed:
+- **Python 3.8+**
+- **pip**
+- **Virtual Environment (Optional but Recommended)**
+
+ Clone the Repository
+```sh
+git clone https://github.com/your-username/law-query.git
+cd law-query
+Create & Activate a Virtual Environment
 sh
 Copy
 Edit
-git clone https://github.com/jaydheshiv/Law-Query.git
-cd Law-Query
-2. Install Dependencies
-Make sure you have Python 3.8+ installed. Then, install the required packages:
-
+python -m venv env
+source env/bin/activate  # On macOS/Linux
+env\Scripts\activate     # On Windows
+Install Dependencies
 sh
 Copy
 Edit
 pip install -r requirements.txt
-Usage
-Run the Streamlit app:
-
+Download NLP Models
+sh
+Copy
+Edit
+python -m spacy download en_core_web_sm
+Start the Application
 sh
 Copy
 Edit
 streamlit run app.py
-Then, enter your legal query in the text box to classify the law type and retrieve relevant legal information.
-
-File Structure
-graphql
+📁 Project Structure
+lua
 Copy
 Edit
-📂 Law-Query/
-│── 📄 app.py  # Main Streamlit application
-│── 📂 data/
-│   ├── civil.csv  # Civil Law dataset
-│   ├── family.csv  # Family Law dataset
-│   ├── Motor_Vehicles.csv  # Motor Vehicles Law dataset
-Technologies Used
-Python
-Streamlit (for UI)
-scikit-learn (for ML model)
-spaCy (for NLP)
-BM25Okapi (for legal text retrieval)
-TextBlob (for sentiment analysis)
-NLTK (for preprocessing)
+law-query/
+│-- data/
+│   │-- civil.csv
+│   │-- family.csv
+│   │-- Motor_Vehicles_Act_Serial_1988.csv
+│-- app.py                  # Main Streamlit application
+│-- requirements.txt
+│-- README.md
+📍 Key Functionalities & Implementation
+1️⃣ Legal Query Classification
+Uses TF-IDF + Logistic Regression for classification.
+Categorizes queries into Civil Law, Family Law, or the Motor Vehicles Act.
+2️⃣ Legal Document Retrieval
+Implements BM25 ranking for retrieving the most relevant legal sections.
+Uses preprocessed legal texts for improved matching.
+3️⃣ Named Entity Recognition (NER)
+Identifies key legal terms in queries.
+Extracts persons, organizations, laws, and legal actions.
+4️⃣ Syntax & Semantics Analysis
+Provides:
+POS tagging
+Dependency parsing
+Noun phrase chunking
+Rule-based entity matching
+5️⃣ Sentiment & Negation Analysis
+Uses TextBlob to determine sentiment polarity.
+Detects negations to enhance query understanding.
