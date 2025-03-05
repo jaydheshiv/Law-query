@@ -1,9 +1,11 @@
  ⚖️ Generalized Law Query Retrieval and Classification System
 
  📌 Project Overview
+ 
 The **Generalized Law Query Retrieval and Classification System** is an **AI-powered legal document retrieval system** that helps users classify legal queries and retrieve relevant law sections based on their input. The system utilizes **TF-IDF + Logistic Regression** for law classification and **BM25** for legal document retrieval, alongside **syntax & semantics analysis, named entity recognition (NER), sentiment analysis, and negation detection**.
 
  🎯 Features
+ 
 - **Legal Query Classification** – Identifies whether a legal query falls under **Civil Law, Family Law, or the Motor Vehicles Act**.
 - **AI-powered Legal Information Retrieval** – Uses **BM25 ranking** to fetch the most relevant legal sections.
 - **Text Preprocessing & NLP** – Performs **tokenization, stopword removal, lemmatization**.
