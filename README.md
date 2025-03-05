@@ -19,33 +19,26 @@ Ensure you have the following installed:
 - **Python 3.8+**
 - **pip**
 - **Virtual Environment (Optional but Recommended)**
-
- Clone the Repository
-```sh
-git clone https://github.com/your-username/law-query.git
-cd law-query
-Create & Activate a Virtual Environment
+  Create & Activate a Virtual Environment
 sh
 Copy
 Edit
 python -m venv env
 source env/bin/activate  # On macOS/Linux
 env\Scripts\activate     # On Windows
-Install Dependencies
-sh
-Copy
-Edit
-pip install -r requirements.txt
+
 Download NLP Models
 sh
 Copy
 Edit
 python -m spacy download en_core_web_sm
+
 Start the Application
 sh
 Copy
 Edit
 streamlit run app.py
+
 📁 Project Structure
 lua
 Copy
@@ -58,6 +51,8 @@ law-query/
 │-- app.py                  # Main Streamlit application
 │-- requirements.txt
 │-- README.md
+
+
 📍 Key Functionalities & Implementation
 1️⃣ Legal Query Classification
 Uses TF-IDF + Logistic Regression for classification.
