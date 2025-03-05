@@ -1,4 +1,4 @@
-⚖️ Generalized Law Query Retrieval and Classification System
+ ⚖️ Generalized Law Query Retrieval and Classification System
 
  📌 Project Overview
 The **Generalized Law Query Retrieval and Classification System** is an **AI-powered legal document retrieval system** that helps users classify legal queries and retrieve relevant law sections based on their input. The system utilizes **TF-IDF + Logistic Regression** for law classification and **BM25** for legal document retrieval, alongside **syntax & semantics analysis, named entity recognition (NER), sentiment analysis, and negation detection**.
@@ -19,30 +19,37 @@ Ensure you have the following installed:
 - **Python 3.8+**
 - **pip**
 - **Virtual Environment (Optional but Recommended)**
-  Create & Activate a Virtual Environment
-sh
-Copy
-Edit
+
+ Clone the Repository
+```sh
+git clone https://github.com/your-username/law-query.git
+cd law-query
+```
+
+ Create & Activate a Virtual Environment
+```sh
 python -m venv env
 source env/bin/activate  # On macOS/Linux
 env\Scripts\activate     # On Windows
+```
 
-Download NLP Models
-sh
-Copy
-Edit
+ Install Dependencies
+```sh
+pip install -r requirements.txt
+```
+
+ Download NLP Models
+```sh
 python -m spacy download en_core_web_sm
+```
 
-Start the Application
-sh
-Copy
-Edit
+ Start the Application
+```sh
 streamlit run app.py
+```
 
-📁 Project Structure
-lua
-Copy
-Edit
+ 📁 Project Structure
+```
 law-query/
 │-- data/
 │   │-- civil.csv
@@ -51,24 +58,30 @@ law-query/
 │-- app.py                  # Main Streamlit application
 │-- requirements.txt
 │-- README.md
+```
 
+ 📍 Key Functionalities & Implementation
+ 1️⃣ **Legal Query Classification**
+- Uses **TF-IDF + Logistic Regression** for classification.
+- Categorizes queries into **Civil Law, Family Law, or the Motor Vehicles Act**.
 
-📍 Key Functionalities & Implementation
-1️⃣ Legal Query Classification
-Uses TF-IDF + Logistic Regression for classification.
-Categorizes queries into Civil Law, Family Law, or the Motor Vehicles Act.
-2️⃣ Legal Document Retrieval
-Implements BM25 ranking for retrieving the most relevant legal sections.
-Uses preprocessed legal texts for improved matching.
-3️⃣ Named Entity Recognition (NER)
-Identifies key legal terms in queries.
-Extracts persons, organizations, laws, and legal actions.
-4️⃣ Syntax & Semantics Analysis
-Provides:
-POS tagging
-Dependency parsing
-Noun phrase chunking
-Rule-based entity matching
-5️⃣ Sentiment & Negation Analysis
-Uses TextBlob to determine sentiment polarity.
-Detects negations to enhance query understanding.
+ 2️⃣ **Legal Document Retrieval**
+- Implements **BM25 ranking** for retrieving the most relevant legal sections.
+- Uses preprocessed legal texts for improved matching.
+
+ 3️⃣ **Named Entity Recognition (NER)**
+- Identifies key legal terms in queries.
+- Extracts **persons, organizations, laws, and legal actions**.
+
+ 4️⃣ **Syntax & Semantics Analysis**
+- Provides:
+  - **POS tagging**
+  - **Dependency parsing**
+  - **Noun phrase chunking**
+  - **Rule-based entity matching**
+
+ 5️⃣ **Sentiment & Negation Analysis**
+- Uses **TextBlob** to determine sentiment polarity.
+- Detects negations to enhance query understanding.
+
+ 📸 Screenshot
